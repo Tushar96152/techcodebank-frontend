@@ -4,6 +4,10 @@
     padding: 0px !important;
 }
 
+.navbar{
+    width: 100vw;
+}
+
 .mobilecard:hover{
     transform: scale(1.25);
     transition: all 0.3s ease-in-out;
@@ -49,6 +53,16 @@ transition: all 0.3s ease-in-out;
     
 }
 
-
-
+@media screen and (max-width:480px) {
+    .nav-ul-item{
+        display: none;
+    }
+    .nav-btn{
+        width: 100%;
+        font-size: 10px;
+        display: flex;
+        gap: 20px;
+        margin-left: -100px;
+    }
+}
 

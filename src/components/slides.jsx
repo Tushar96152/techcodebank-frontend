@@ -15,7 +15,7 @@ import 'swiper/css/autoplay';
 const Slides = () => {
   return (
       <>
-    <div>
+    <div className='w-100%'>
         <Swiper 
         modules={[Pagination , Autoplay]}
       spaceBetween={20}

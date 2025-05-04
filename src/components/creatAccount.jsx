@@ -46,7 +46,7 @@ var fetchbranchId= async() => {
     } , [])
 
   const onSubmit = async(e) => {
-    // try{
+    try{
      console.log(userdata.id)
       //const userId = userdata.id;
        console.log(e);
@@ -89,13 +89,13 @@ var fetchbranchId= async() => {
     }); 
     console.log(data)
     
-  //   if(data.code == 1){
-  //     toast.success('Account was sucessfully created')
-  //     navigate('/al');
-  //   }
-  // }catch{
-  //   toast.error('page not found');
-  // }
+    if(data.code == 1){
+      toast.success('Account was sucessfully created')
+      navigate('/al');
+    }
+  }catch{
+    toast.error('page not found');
+  }
 
    // Handle form submission here
   };

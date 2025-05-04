@@ -9,9 +9,11 @@ const Main = () => {
     <>
     <div className="bg-[#aa9ca1] w-100% h-110 relative top-34 w-100% "> 
       <Sliders />
-      <div className='bg-[#FDBD30] w-100% h-12  '> 
-        <p className='py-3 px-3 text-[#CD2159] font-bold'>It is informational  that the customer  charges for over and above free transactions on other bank's ATMs are revised as Rs.23/-per  financial transaction.</p>
-      </div>
+      <div className="bg-[#FDBD30] w-full py-2 md:py-3 px-4">
+  <p className="text-[#CD2159] font-bold text-xs sm:text-sm md:text-base text-center leading-tight md:leading-normal">
+    Please note: Charges for transactions beyond free limits on other banks' ATMs have been revised to ₹23 per transaction.
+  </p>
+</div>
      </div>
     <hr />
     </>

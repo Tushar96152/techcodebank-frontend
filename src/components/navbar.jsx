@@ -92,28 +92,26 @@ const Navbar = () => {
 
   return (
     <>
-    <nav className="fixed z-112 w-100% ">
+    <nav className="navbar fixed z-112">
 
-      <div className="flex  justify-between  bg-[#A20A3A] w-[85rem]  h-20 py-5 px-[2rem] mt-[-8px]">
+      <div className="flex  justify-between  bg-gray-800 w-[vw] h-20 py-5 px-[2rem] mt-[-8px]">
           <img src={Logo} alt=""  className='w-18 h-12 absolute rounded-full'/>
         <div className=''>
           <h1 className="text-[#FDBD30] font-bold text-xl ml-[7rem]">
             Tech Code bank
           </h1>
-          <p className="text-white text-sm ml-[7rem]">...the name you can BANK upon !</p>
+          <p className="nav-ul-item text-white text-sm ml-[7rem]">...the name you can BANK upon !</p>
         </div>
 
         <div className="flex gap-3">
-          <ul className='flex gap-3'>
+          <ul className='nav-ul-item flex gap-3'>
             <li> <a href="" className='text-[#FDBD30] text-sm'>Fees and services</a></li>
-            <li> <a href="" className='text-[#FDBD30] text-sm'>PNB Apps</a></li>
-            <li><a href="" className='text-[#FDBD30] text-sm'>Calculator</a></li>
             <li> <a href="" className='text-[#FDBD30] text-sm' > Tenders </a></li>
             <li> <a href=""  className='text-[#FDBD30] text-sm' > Public Notices </a></li>
           </ul>
           <div className='flex gap-2'> 
             <input className='w-40 h-8 p-2 text-white bg-[#CD2159] rounded-sm' type="text" placeholder='Search'/>
-            <ul>
+            <ul className='nav-ul-item'>
                 <li> <NavLink href=""  className='text-[#FDBD30] text-sm' >  Hi to 9264092640 </NavLink></li>
             </ul>
                    
@@ -125,19 +123,19 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex py-2 px-30 gap-6 bg-[#FDBD30] w-100% h-16 sticky-top  ">
+      <div className="flex py-2 px-30 gap-6 bg-gray-700 w-100% h-16 sticky-top opacity-80  ">
         
-        <ul className='flex gap-10 my-auto font-bold text-2xl'>
-             <li> <a href="/"  className='text-[#A20A3A] text-sm' > Home </a> </li>
-             <li> <button   className='text-[#A20A3A] text-sm'  onClick={() => toggle('about')} > About Us <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button> </li>
-             <li> <button  className='text-[#A20A3A] text-sm' onClick={() => toggle('Products')} > Products <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
-              <li> <button  className='text-[#A20A3A] text-sm' onClick={() => toggle('Services')} > E-Services <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
-             <li> <button  className='text-[#A20A3A] text-sm'  onClick={() => toggle('Inverstors')} > Inverstors <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
-             { userdata.roleId === 1 ? <li> <NavLink to="/manager"  className='text-[#A20A3A] text-sm' > Dashboard </NavLink></li> : null } 
-               <li> <button onClick={userCheck}  className='text-[#A20A3A] text-sm' > Account </button></li> 
+        <ul className='nav-btn flex gap-10 my-auto font-bold text-2xl'>
+             <li> <a href="/"  className='text-gray-300 text-sm' > Home </a> </li>
+             <li> <button   className='text-gray-300 text-sm'  onClick={() => toggle('about')} > About Us <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button> </li>
+             <li> <button  className='text-gray-300 text-sm' onClick={() => toggle('Products')} > Products <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
+              <li> <button  className='text-gray-300 text-sm' onClick={() => toggle('Services')} > E-Services <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
+             <li> <button  className='text-gray-300 text-sm'  onClick={() => toggle('Inverstors')} > Inverstors <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
+             { userdata.roleId === 1 ? <li> <NavLink to="/manager"  className='text-gray-300 text-sm' > Dashboard </NavLink></li> : null } 
+               <li> <button onClick={userCheck}  className='text-gray-300 text-sm' > Account </button></li> 
                  
         </ul>
-        <button onClick={ handleAcount } className='bg-[#A20A3A] text-white w-40 h-10 rounded-lg'> <a href="/netbanking"> Internet Banking </a> </button>
+        <button onClick={ handleAcount } className='bg-[#A20A3A]  text-white w-40 h-10 rounded-lg '> <a href="/netbanking"> Internet Banking </a> </button>
       </div>
       
       { showpage === 'about' && <AboutUs />  }
