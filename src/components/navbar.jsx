@@ -6,11 +6,9 @@ import AboutUs from './aboutUs'
 import Produtcs from './produtcs'
 import EServices from './eServices'
 import Inverstors from './Investors'
-
 import { useContext  } from 'react'
 import { UserContext } from '../contextapi/index'
 import axios from 'axios';
-
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 
