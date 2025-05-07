@@ -1,5 +1,8 @@
 import React from 'react'
+import Blogo from '../assets/Blogo.png'
+
 import Logo from '../assets/logo.png'
+import UserLogo from '../assets/userlogo.svg'
 import { NavLink } from 'react-router-dom';
 import { useState , useEffect } from 'react';
 import AboutUs from './aboutUs'
@@ -11,6 +14,7 @@ import { UserContext } from '../contextapi/index'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+
 
 const Navbar = () => {
   var  { userdata }   = useContext(UserContext);
@@ -94,8 +98,8 @@ const Navbar = () => {
     <>
     <nav className="navbar fixed z-112">
 
-      <div className="flex  justify-between  bg-gray-800 w-[vw] h-20 py-5 px-[2rem] mt-[-8px]">
-          <img src={Logo} alt=""  className='w-18 h-12 absolute rounded-full'/>
+      <div className="flex  justify-between  bg-[#003459] w-[vw] h-20 py-5 px-[2rem] mt-[-8px]">
+          <img src={Blogo} alt=""  className='w-18 h-12 absolute rounded-sm'/>
         <div className=''>
           <h1 className="text-[#FDBD30] font-bold text-xl ml-[7rem]">
             Tech Code bank
@@ -115,7 +119,7 @@ const Navbar = () => {
                 <li> <NavLink href=""  className='text-[#FDBD30] text-sm' >  Hi to 9264092640 </NavLink></li>
             </ul>
                    
-           { userdata && Object.entries(userdata).length > 0 ? ( <div className='flex gap-5 text-center '> <h1 className='bg-blue-400 w-10 h-10 rounded-full p-1 text-2xl'> T </h1>  <button onClick={handleLogout} className="login-btn btn text-white w-30 h-10 bg-[#cd2159] rounded-lg"> logout</button> </div>
+           { userdata && Object.entries(userdata).length > 0 ? ( <div className='flex gap-5 text-center '> <img src={UserLogo} alt="" />  <button onClick={handleLogout} className="login-btn btn text-white w-30 h-10 bg-[#cd2159] rounded-lg"> logout</button> </div>
             ) : (  <NavLink to="/login"> <button className="login-btn btn text-white w-30 h-10 bg-[#cd2159] rounded-lg" > login </button> </NavLink>
             )}
             
@@ -123,19 +127,19 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex py-2 px-30 gap-6 bg-gray-700 w-100% h-16 sticky-top opacity-80  ">
+      <div className="nav-btns flex py-2 px-30 gap-6 bg-[#003459] w-100% h-16 sticky-top opacity-80  ">
         
-        <ul className='nav-btn flex gap-10 my-auto font-bold text-2xl'>
+        <ul className='flex gap-10 my-auto font-bold text-2xl'>
              <li> <a href="/"  className='text-gray-300 text-sm' > Home </a> </li>
-             <li> <button   className='text-gray-300 text-sm'  onClick={() => toggle('about')} > About Us <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button> </li>
-             <li> <button  className='text-gray-300 text-sm' onClick={() => toggle('Products')} > Products <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
-              <li> <button  className='text-gray-300 text-sm' onClick={() => toggle('Services')} > E-Services <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
-             <li> <button  className='text-gray-300 text-sm'  onClick={() => toggle('Inverstors')} > Inverstors <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
+             <li className='nav-btn'> <button   className='text-gray-300 text-sm'  onClick={() => toggle('about')} > About Us <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button> </li>
+             <li className='nav-btn'> <button  className='text-gray-300 text-sm' onClick={() => toggle('Products')} > Products <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
+              <li className='nav-btn'> <button  className='text-gray-300 text-sm' onClick={() => toggle('Services')} > E-Services <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
+             <li className='nav-btn'> <button  className='text-gray-300 text-sm'  onClick={() => toggle('Inverstors')} > Inverstors <span className="material-symbols-outlined align-middle">keyboard_arrow_up</span> </button></li>
              { userdata.roleId === 1 ? <li> <NavLink to="/manager"  className='text-gray-300 text-sm' > Dashboard </NavLink></li> : null } 
                <li> <button onClick={userCheck}  className='text-gray-300 text-sm' > Account </button></li> 
-                 
+           
         </ul>
-        <button onClick={ handleAcount } className='bg-[#A20A3A]  text-white w-40 h-10 rounded-lg '> <a href="/netbanking"> Internet Banking </a> </button>
+        <button onClick={ handleAcount } className='netbanking bg-[#A20A3A]  text-white w-40 h-10 rounded-lg '> <a href="/netbanking"> Internet Banking </a> </button>
       </div>
       
       { showpage === 'about' && <AboutUs />  }

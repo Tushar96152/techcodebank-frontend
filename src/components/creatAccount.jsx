@@ -101,14 +101,14 @@ var fetchbranchId= async() => {
   };
 
   return (
-    <div className="container mx-auto p-4 max-w-2xl py-44 ">
+    <div className="mx-auto px-[16rem] py-44 bg-gray-400 ">
       {isSubmitting && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white p-4 rounded shadow-lg">Loading...</div>
         </div>
       )}
 
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-[#c9d1d6]  shadow-2xl rounded-lg px-8 pt-6 pb-8 mb-4">
         <h1 className="text-2xl font-bold mb-6 text-center text-blue-600">Account Opening Form</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

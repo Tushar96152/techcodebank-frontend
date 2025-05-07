@@ -39,7 +39,7 @@ function NetBanking() {
  
 
   return (
-    <div className='w-100% h-200 py-40 px-10 bg-gray-300'>
+    <div className='w-100% h-200 py-40 px-10 bg-gray-200'>
 
     <div className='absolute right-[2.5rem]'>
        <button onClick={accountLogout} className='logoutAcc-btn bg-red-600 w-26 h-10 hover:bg-red-400 cursor-pointer' >Logout</button>

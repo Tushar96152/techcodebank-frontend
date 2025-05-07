@@ -41,7 +41,7 @@ const AccountSumary = () => {
     ];
   
   return (
-    <div className="h-150 bg-gray-200 p-4 md:p-8">
+    <div className="h-150 box-border-0 bg-gray-200 p-2 m-0 md:p-8">
       {/* Header */}
       <div className="flex  items-center mb-6">
         <div>

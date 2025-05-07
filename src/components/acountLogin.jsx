@@ -45,9 +45,9 @@ const handleSubmit = async(event) => {
 
   return (
     <>
-    <div className='w-100% h-150 bg-red-300 py-36  px-[30rem]'> 
+    <div className='w-100% h-150 bg-gray-400 py-36  px-[30rem]'> 
 <section className='left-side '>
-    <div className='w-90 h-108 bg-gray-100 border-1'>
+    <div className='w-90 h-108 bg-gray-100 border-gray-200 border-1 shadow-2xl rounded-sm'>
       <h2 className='ml-4'> Loging your NetBanking Id ? <a href="/createAccount" className='text-blue-600'>Create Acccount</a> </h2>
       <hr />
  <form action="post" onSubmit={handleSubmit}>
@@ -55,11 +55,11 @@ const handleSubmit = async(event) => {
 
          <div>
               <label htmlFor="">Bank ID</label>
-               <input className='border-1 rounded-sm bg-white w-55 h-8 ml-9 text-black px-4' type="text"  placeholder='' value={userId} onChange={(e) =>setUserId(e.target.value) } />
+               <input className='border-1 rounded-sm bg-white w-55 h-8 ml-9 text-black px-4' type="text"  placeholder='' required value={userId} onChange={(e) =>setUserId(e.target.value) } />
         </div>
         <div>
                <label htmlFor="">password</label>
-                <input className='border-1 rounded-sm bg-white w-55 h-8 ml-5 text-black px-4' type="text"  placeholder='' id='passwprd' value={password} name={password} onChange={(e) =>setPassword(e.target.value) } />
+                <input className='border-1 rounded-sm bg-white w-55 h-8 ml-5 text-black px-4' type="password"  placeholder='' required id='passwprd' value={password} name={password} onChange={(e) =>setPassword(e.target.value) } />
          </div>
       </div>
      <hr />

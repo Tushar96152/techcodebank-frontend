@@ -57,12 +57,17 @@ transition: all 0.3s ease-in-out;
     .nav-ul-item{
         display: none;
     }
-    .nav-btn{
+    .nav-btns{
         width: 100%;
-        font-size: 10px;
-        display: flex;
-        gap: 20px;
-        margin-left: -100px;
+        padding: 1rem;
     }
+    .nav-btn{
+        display: none;
+    }
+
+    .netbanking{
+        width: 12rem !important;
+    }
+
 }
 

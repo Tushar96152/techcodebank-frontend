@@ -24,7 +24,7 @@ const AboutUs = () => {
             <a href="#" className='text-xs hover:text-[#A20A3A] transition duration-200'>Schuna</a>
           </li>
           <li>
-            <a href="#" className='text-xs hover:text-[#A20A3A] transition duration-200'>Origin of PNB</a>
+            <a href="#" className='text-xs hover:text-[#A20A3A] transition duration-200'>Origin of TCB</a>
           </li>
           <li>
             <a href="#" className='text-xs hover:text-[#A20A3A] transition duration-200'>Heritage</a>

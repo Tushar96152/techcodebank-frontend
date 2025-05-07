@@ -108,7 +108,7 @@ const Loandetail = () => {
         </div>
       </div>
       
-      <div className="mt-8 overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
+      <div className="mt-8 overflow-hidden shadow-xl ring-1 ring-gray-300 ring-opacity-5 sm:rounded-lg">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-300">
             <thead className="bg-gray-50">

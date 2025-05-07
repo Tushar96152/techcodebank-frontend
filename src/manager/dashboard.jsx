@@ -36,10 +36,10 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
+    <div className="h-100 bg-gray-200 p-10 ">
       <h1 className="text-2xl font-bold text-gray-800 mb-6">Manager Dashboard</h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-1 h-90 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
         {/* Customers Card */}
         <div className="bg-white p-6 rounded-lg shadow">
           <h3 className="text-gray-500 text-sm font-medium">Total Customers</h3>
@@ -106,24 +106,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Data Tables Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Recent Loans */}
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-gray-800 font-medium mb-4">Recent Loan Applications</h3>
-          <div className="bg-gray-100 h-40 rounded flex items-center justify-center">
-            <p className="text-gray-500">Loan data will appear here</p>
-          </div>
-        </div>
-
-        {/* Recent Credit Cards */}
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-gray-800 font-medium mb-4">Recent Credit Card Applications</h3>
-          <div className="bg-gray-100 h-40 rounded flex items-center justify-center">
-            <p className="text-gray-500">Credit card data will appear here</p>
-          </div>
-        </div>
-      </div>
+    
     </div>
   )
 }

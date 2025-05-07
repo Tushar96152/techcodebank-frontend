@@ -76,7 +76,7 @@ const Loanform = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 px-16 py-40 bg-gray-100 opacity-80 rounded-lg shadow-md">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 px-16 py-40 bg-gray-300 opacity-80 rounded-lg shadow-md">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {/* Loan Amount Field */}
         <div>
@@ -128,8 +128,8 @@ const Loanform = () => {
                 valueAsNumber: true,
                 required: "Interest rate is required",
                 min: {
-                  value: 0.1,
-                  message: "Minimum interest rate is 0.1%"
+                  value: 5,
+                  message: "Minimum interest rate is 5%"
                 },
                 max: {
                   value: 30,

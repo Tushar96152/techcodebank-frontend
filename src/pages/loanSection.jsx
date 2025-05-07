@@ -33,7 +33,7 @@ const [loanData , setLoanData] =useState([])
   return (
     <>
 
-    <nav className='flex w-100%'> 
+    <nav className='flex w-100% box-border-0 m-0 p-0'> 
          <a href="/loanApply">
      <button className='bg-[#A20A3A] w-[30rem] h-10 border-gray-400 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Loan</button>
         </a>

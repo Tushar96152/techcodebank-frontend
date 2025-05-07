@@ -11,7 +11,7 @@ const Marketfeed = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-gray-200">
       {/* Top Navigation Bar */}
       <div className="bg-white shadow-sm">
         <div className="container mx-auto px-4">
@@ -51,7 +51,7 @@ const Marketfeed = () => {
       </div>
 
       {/* Secondary Navigation */}
-      <div className="bg-[#FDBD30] py-3 overflow-x-auto">
+      <div className="bg-blue-300 py-3 overflow-x-auto shadow-2xl">
         <div className="container mx-auto px-4">
           <div className="flex space-x-6 md:space-x-8 whitespace-nowrap">
             {[
