@@ -1,4 +1,7 @@
 import React from 'react';
+import Aditya from '../assets/people/aditya.jpg'
+import Tushar from '../assets/people/tushar.jpeg' 
+import UserLogo from '../assets/userlogo.svg'
 
 const FounderPage = () => {
   const founders = [
@@ -6,37 +9,24 @@ const FounderPage = () => {
       id: 1,
       name: 'Tushar',
       title: 'CEO & Co-Founder',
-      image: 'https://randomuser.me/api/portraits/men/1.jpg',
+      image: Tushar,
       bio: 'Visionary leader with 15+ years of experience in tech entrepreneurship.'
     },
     {
       id: 2,
-      name: 'Jane Smith',
+      name: 'Aditya Vijay',
       title: 'CTO',
-      image: 'https://randomuser.me/api/portraits/women/1.jpg',
+      image:  Aditya,
       bio: 'Technical expert specializing in scalable architecture and AI solutions.'
     },
     {
       id: 3,
-      name: 'Michael Johnson',
+      name: 'Remash Kumar',
       title: 'Chief Product Officer',
-      image: 'https://randomuser.me/api/portraits/men/2.jpg',
+      image: UserLogo,
       bio: 'Product development guru with a passion for user-centric design.'
     },
-    {
-      id: 4,
-      name: 'Sarah Williams',
-      title: 'Chief Marketing Officer',
-      image: 'https://randomuser.me/api/portraits/women/2.jpg',
-      bio: 'Marketing strategist with a track record of successful brand building.'
-    },
-    {
-      id: 5,
-      name: 'David Brown',
-      title: 'Chief Financial Officer',
-      image: 'https://randomuser.me/api/portraits/men/3.jpg',
-      bio: 'Financial expert ensuring sustainable growth and operational efficiency.'
-    }
+
   ];
 
   return (
@@ -51,7 +41,7 @@ const FounderPage = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="grid grid-cols-3 gap-10  sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-3">
           {founders.map((founder) => (
             <div 
               key={founder.id} 
@@ -59,7 +49,7 @@ const FounderPage = () => {
             >
               <div className="p-4">
                 <img
-                  className="w-32 h-32 mx-auto rounded-full object-cover border-4 border-indigo-100"
+                  className="w-42 h-42 mx-auto rounded-full object-cover border-4 border-indigo-100"
                   src={founder.image}
                   alt={founder.name}
                 />

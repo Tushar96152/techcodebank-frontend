@@ -46,12 +46,14 @@ const Loandetail = () => {
            }
          });
          console.log(data)
+         localStorage.setItem('loanstatus' , JSON.stringify(data))
         }
         console.log(status)
   }
 
   useEffect(() => {
     handleData();
+    localStorage.getItem('loanstatus');
   }, []);
 
   const getStatusBadge = (status) => {
@@ -182,8 +184,9 @@ const Loandetail = () => {
                       {/* {getStatusBadge(loan.loanStatus)} */}
                        <select name="" id="" onChange={handlechangestatus}
                            className='w-20 h-7 border-0 ml-[-10px] '>
-                            <option value="PENDING" className='text-amber-300 '>PENDING</option>
-                            <option value="APPROVE" className='text-green-400'>APPROVE</option>
+                            <option value="PENDING" className='text-amber-300 '>Pending</option>
+                            <option value="APPROVED" className='text-green-400'>Aproved</option>
+                            <option value="CLOSED" className='text-green-400'>Closed</option>
                           </select>
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">

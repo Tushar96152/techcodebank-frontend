@@ -50,12 +50,14 @@ const Creditapp = () => {
            }
          });
          console.log(data)
+         localStorage.setItem('creditstatus' , JSON.stringify(data));
         }
         console.log(status)
   }
 
   useEffect(() => {
     fetchCreditApplications();
+    localStorage.getItem('creditstatus');
   }, []);
 
   const getStatusBadge = (status) => {
@@ -192,9 +194,9 @@ const Creditapp = () => {
                           {/* {getStatusBadge(application.status)} */}
                           <select name="" id="" onChange={handlechangestatus}
                            className='w-20 h-7 border-0 ml-[-10px]'>
-                            <option value="PENDING" >PENDING</option>
-                            <option value="APPROVE" >APPROVE</option>
-
+                            <option value="PENDING" >Pending</option>
+                            <option value="APPROVED" >Approved</option>
+                            <option value="CLOSED" >Closed</option>
                           </select>
                         </td>
                         <td className="px-3 py-4 text-sm text-gray-500 max-w-xs truncate" title={application.message}>

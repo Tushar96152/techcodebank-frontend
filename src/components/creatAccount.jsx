@@ -4,12 +4,12 @@ import { useForm } from 'react-hook-form';
 import { useContext  } from 'react';
 import { UserContext } from '../contextapi/index';
 //import { toast } from 'react-toastify';
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 function CreatAccount() {
    var { userdata } = useContext(UserContext);
-  // const navigate = useNavigate();
+   const navigate = useNavigate();
     const [cityId , setCityId] =useState([]);
     const [branchId , setBranchId] = useState([]);
 
@@ -76,9 +76,6 @@ var fetchbranchId= async() => {
     }
 
       
-   
-  
-    
     const token = JSON.parse(localStorage.getItem('token'));
     const { data } = await axios.post('http://3.110.164.139:8080/account/create' ,
      reqdata
@@ -92,9 +89,11 @@ var fetchbranchId= async() => {
     if(data.code == 1){
       toast.success('Account was sucessfully created')
       navigate('/al');
+    }else{
+      toast.error('somthing went wrong')
     }
   }catch{
-    toast.error('page not found');
+    navigate('*')
   }
 
    // Handle form submission here
@@ -310,15 +309,15 @@ var fetchbranchId= async() => {
             <input
               id="documentType"
               type="text"
-              placeholder="Aadhaar Number"
+              placeholder="Documment Number"
               className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                 errors.aadhaarNumber ? 'border-red-500' : ''
               }`}
               {...register('documentNumber', {
                 required: { value: true, message: 'document number is required' },
                 pattern: {
-                  value: /^\d{12}$/,
-                  message: 'documentNumber must be 12 digits'
+                  value: /^\d{4}$/,
+                  message: 'documentNumber must be 4 digits'
                 }
               })}
             />

@@ -30,7 +30,7 @@ const Navbar = () => {
     localStorage.removeItem('user');
     localStorage.removeItem('token');
     localStorage.removeItem('accoundetail');
-    localStorage.removeItem('id');
+    localStorage.removeItem('userId');
     toast.success('Logout success');  
     navigate('/')
     window.location.reload();
@@ -60,7 +60,8 @@ const Navbar = () => {
        console.log('clicked');
        const token = JSON.parse(localStorage.getItem('token'));
       // const id = userdata.id;
-        const id = JSON.parse(localStorage.getItem('id'))
+        const code = JSON.parse(localStorage.getItem('code'))
+        const id = JSON.parse(localStorage.getItem('userId'))
         console.log(id);
        const {data} =  await axios.get(`http://3.110.164.139:8080/account/getById/${id}`,{
          headers: {
@@ -73,7 +74,8 @@ const Navbar = () => {
       navigate('/login'); 
        }
       const accoundetail = data.data;
-    if( data.code == 1 ){
+      console.log(data)
+    if( data.code === 1 ){
       setAcountdata(accoundetail);
       localStorage.setItem('accoundetail', JSON.stringify(accoundetail));
       console.log(accoundetail);
@@ -81,6 +83,7 @@ const Navbar = () => {
       navigate('/netbanking');
     }else{
       navigate('/al')
+      localStorage.removeItem('code');
     }
     } catch (error) {
     console.error('Error fetching account details:', error);
