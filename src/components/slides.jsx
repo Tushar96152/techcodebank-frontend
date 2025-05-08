@@ -1,7 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide  } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-import Tc from '../assets/tc.jpeg'
 import TcbPAge from '../assets/tcbpage.jpg'
 import Bank from '../assets/bank.jpg'
 import Man from '../assets/man.jpg'
@@ -12,8 +11,6 @@ import slide3 from '../assets/3dbank.jpg'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-
-
 
 const Slides = () => {
   return (
