@@ -39,7 +39,7 @@ const [loanData , setLoanData] =useState([])
     <>
     <main className=' multitabBox p-0 m-0 h-150 bg-gray-300'>
 
-    <nav className='xl:grid-cols-2  lg:grid-cols-1'> 
+    <nav className='flex'> 
          <a href="/loanApply">
         <button className='bg-[#A20A3A] w-[33rem] h-10 border-gray-300 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Loan</button>
         </a>
@@ -47,12 +47,10 @@ const [loanData , setLoanData] =useState([])
         <a href="/credit-card">
      <button className='bg-[#A20A3A] w-[33rem]  h-10 border-gray-400 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Credit </button>
         </a>
-
-  
     </nav>
 
 
-    <main className=' flex h-80  mt-10 mx-20 justify-between'> 
+    <main className='flex h-80  mt-10 mx-20 justify-between'> 
     {loanData.map((elem) => (
       <div 
       key={elem.id}
