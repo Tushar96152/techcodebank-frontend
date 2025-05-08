@@ -41,11 +41,11 @@ const [loanData , setLoanData] =useState([])
 
     <nav className='xl:grid-cols-2  lg:grid-cols-1'> 
          <a href="/loanApply">
-        <button className='bg-[#A20A3A] w-[34rem] h-10 border-gray-300 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Loan</button>
+        <button className='bg-[#A20A3A] w-[33rem] h-10 border-gray-300 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Loan</button>
         </a>
       
         <a href="/credit-card">
-     <button className='bg-[#A20A3A] w-[34rem]  h-10 border-gray-400 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Credit </button>
+     <button className='bg-[#A20A3A] w-[33rem]  h-10 border-gray-400 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Credit </button>
         </a>
 
   

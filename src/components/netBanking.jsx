@@ -59,19 +59,17 @@ function NetBanking() {
            <Tab width="50%" label="Loan Section"  value="5"  />
            <Tab width="50%" label="change password"  value="6"  />
            <Tab width="50%" label="Reset Transaction PIN"  value="7"  />
-
-         
         </TabList>
 
       <section className='bg-gray-200 w-[70rem] h-150  '>
-        <TabPanel value="1">  <Myprofile  />  </TabPanel>
-        <TabPanel value="2">  <AccountSumary /> </TabPanel>
-        <TabPanel value="3">  <Estatement /> </TabPanel>
-        <TabPanel value="4">   <Virtualcard />  </TabPanel>
+        <TabPanel className='p-0 m-0' value="1">  <Myprofile  />  </TabPanel>
+        <TabPanel className='p-0 m-0' value="2">  <AccountSumary /> </TabPanel>
+        <TabPanel className='p-0 m-0' value="3">  <Estatement /> </TabPanel>
+        <TabPanel className='p-0 m-0' value="4">   <Virtualcard />  </TabPanel>
         {/* <TabPanel value="5">   <Creditsection />  </TabPanel> */}
-        <TabPanel value="5">   <LoanSection />  </TabPanel>
-        <TabPanel value="6">   <ForgetPassword />  </TabPanel>
-        <TabPanel value="7">   <Netpasswdreset />  </TabPanel>
+        <TabPanel className='p-0 m-0'  value="5">   <LoanSection />  </TabPanel>
+        <TabPanel className='p-0 m-0' value="6">   <ForgetPassword />  </TabPanel>
+        <TabPanel className='p-0 m-0' value="7">   <Netpasswdreset />  </TabPanel>
 
       </section>
 
