@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Loandetail = () => {
+  const [loanstatus , setLoanstatus] = useState([]);
   const [loanDetail, setLoanDetail] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -26,6 +27,28 @@ const Loandetail = () => {
       setLoading(false);
     }
   };
+
+   //change credit card status
+    const handlechangestatus = async(e) => {
+      const status = e.target.value ;
+       setLoanstatus(status);
+       if(status){
+         const id = JSON.parse(localStorage.getItem('loanId'));
+         console.log(id)
+        const payload = {
+          id : id,
+          status : status
+        }
+         const token = JSON.parse(localStorage.getItem('token'));
+         const { data } = await axios.put(`http://3.110.164.139:8080/manager/change-status-loan`, payload,{
+           headers: {
+             'Authorization': `Bearer ${token}` 
+           }
+         });
+         console.log(data)
+        }
+        console.log(status)
+  }
 
   useEffect(() => {
     handleData();
@@ -156,7 +179,12 @@ const Loandetail = () => {
                       {formatCurrency(loan.outstandingAmount)}
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                      {getStatusBadge(loan.loanStatus)}
+                      {/* {getStatusBadge(loan.loanStatus)} */}
+                       <select name="" id="" onChange={handlechangestatus}
+                           className='w-20 h-7 border-0 ml-[-10px] '>
+                            <option value="PENDING" className='text-amber-300 '>PENDING</option>
+                            <option value="APPROVE" className='text-green-400'>APPROVE</option>
+                          </select>
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                       {formatDate(loan.applicationDate)}

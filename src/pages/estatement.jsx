@@ -36,13 +36,13 @@ const Estatement = () => {
 
 
   return (
-    <div className="max-w-6xl h-150 mx-0 p-6 box-border-0 bg-gray-100 rounded-lg shadow-md overflow-y-scroll">
+    <div className="max-w-6xl h-150 mx-0 p-0 box-border-0 bg-gray-100 rounded-lg shadow-md overflow-y-scroll">
       <div className="flex items-center mb-6 ml-[2rem]">
-        <h2 className="text-2xl font-bold text-[#A20A3A]">Transaction History</h2>
+        <h2 className="text-2xl font-bold text-[#A20A3A] p-5">Transaction History</h2>
       
       </div>
 
-      <div className="overflow-x-auto overflow-y-scroll">
+      <div className="overflow-x-auto overflow-y-scroll px-5">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>

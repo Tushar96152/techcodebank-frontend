@@ -8,7 +8,7 @@ const MyProfile = () => {
 
 
   return (
-    <div className="w-full box-border-0 m-0  bg-gray-200 h-150 ">
+    <div className="w-100% box-border-0 m-0  bg-gray-200 h-150 p-0">
       {/* Header */}
       <div className="bg-[#A20A3A] text-white p-4">
         <h1 className="text-xl font-bold">My Profile</h1>

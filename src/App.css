@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+body{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 .css-13xfq8m-MuiTabPanel-root {
     padding: 0px !important;
 }

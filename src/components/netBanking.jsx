@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useEffect, useMemo } from 'react'
 
 import Box from '@mui/material/Box';
 import TabList from '@mui/lab/TabList';
@@ -29,24 +29,26 @@ function NetBanking() {
     setValue(newValue);
   };
 
-  const accountLogout = () => {
-    localStorage.removeItem('accoundetail');
-    localStorage.removeItem('code');
-    toast.success('Logout success');
-    navigate('/')
-    window.location.reload();
+  const accountLogout = async() => {
+      localStorage.removeItem('accoundetail');
+      localStorage.removeItem('id');
+      toast.success('Logout success');
+       navigate('/')
+       window.location.reload();
   }
+  
+
  
 
   return (
-    <div className='w-100% h-200 py-40 px-10 bg-gray-200'>
+    <div className='w-100% h-200 py-40 px-10 bg-gray-400'>
 
     <div className='absolute right-[2.5rem]'>
        <button onClick={accountLogout} className='logoutAcc-btn bg-red-600 w-26 h-10 hover:bg-red-400 cursor-pointer' >Logout</button>
     </div>
         <div>
          
-    <Box width="100%" height={200} className="flex p-0 m-0"> 
+    <Box width="100%" height={200} className="flex p-0 m-0 rounded-sm shadow-xl"> 
       <TabContext width="100%" value={value} >
         <TabList  onChange={handleChange} orientation='vertical'  className='flex bg-amber-300  w-60 h-150 py-5  '>
           <Tab width="50%" label="Profile"  value="1"  />

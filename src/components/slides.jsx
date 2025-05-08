@@ -2,10 +2,11 @@ import React from 'react'
 import { Swiper, SwiperSlide  } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import Tc from '../assets/tc.jpeg'
-import Tcb from '../assets/tcb.jpeg'
 import TcbPAge from '../assets/tcbpage.jpg'
 import Bank from '../assets/bank.jpg'
 import Man from '../assets/man.jpg'
+import Slide1 from '../assets/slide1.jpeg'
+import Slide2 from '../assets/slide2.jpg'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -41,7 +42,13 @@ const Slides = () => {
 
         <SwiperSlide> 
         <div className='flex justify-center'>
-         <img className='w-500 h-120' src={Tc} alt="" /> 
+         <img className='w-500 h-120' src={Slide1} alt="" /> 
+        </div>
+        </SwiperSlide>
+
+        <SwiperSlide> 
+        <div className='flex justify-center'>
+         <img className='w-500 h-120' src={Slide2} alt="" /> 
         </div>
         </SwiperSlide>
 

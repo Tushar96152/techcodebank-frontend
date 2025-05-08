@@ -28,8 +28,8 @@ const handleSubmit = async(event) => {
       const userid = data.data.userId;
       console.log(userid)
       localStorage.setItem('userId' , JSON.stringify(userid));
-      const id = data.code;
-      localStorage.setItem('code', JSON.stringify(id));
+      // const id = data.code;
+      // localStorage.setItem('code', JSON.stringify(id));
       if(data.code == 1){
         toast.success(data.message)
         navigate('/');

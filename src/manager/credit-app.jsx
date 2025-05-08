@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useContext ,memo} from 'react';
+import { UserContext } from '../contextapi/index'
 import axios from 'axios';
+
 const Creditapp = () => {
+   var  { userdata }   = useContext(UserContext); 
+
   const [creditApplications, setCreditApplications] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [creditstatus , setCreditstatus] = useState([]);
 
   const fetchCreditApplications = async () => {
     const token = JSON.parse(localStorage.getItem('token'));
@@ -26,6 +31,28 @@ const Creditapp = () => {
       setLoading(false);
     }
   };
+
+  //change credit card status
+    const handlechangestatus = async(e) => {
+      const status = e.target.value ;
+       setCreditstatus(status);
+       if(status){
+         const id = JSON.parse(localStorage.getItem('applicationId'));
+         console.log(id)
+        const payload = {
+          id : id,
+          status : status
+        }
+         const token = JSON.parse(localStorage.getItem('token'));
+         const { data } = await axios.put(`http://3.110.164.139:8080/manager/change-status-credit-card`, payload,{
+           headers: {
+             'Authorization': `Bearer ${token}` 
+           }
+         });
+         console.log(data)
+        }
+        console.log(status)
+  }
 
   useEffect(() => {
     fetchCreditApplications();
@@ -100,6 +127,8 @@ const Creditapp = () => {
     );
   }
 
+
+
   return (
     <div className="px-4 sm:px-6 lg:px-8 py-8">
       <div className="sm:flex sm:items-center">
@@ -160,7 +189,13 @@ const Creditapp = () => {
                           {formatCurrency(application.annualIncome)}
                         </td>
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                          {getStatusBadge(application.status)}
+                          {/* {getStatusBadge(application.status)} */}
+                          <select name="" id="" onChange={handlechangestatus}
+                           className='w-20 h-7 border-0 ml-[-10px]'>
+                            <option value="PENDING" >PENDING</option>
+                            <option value="APPROVE" >APPROVE</option>
+
+                          </select>
                         </td>
                         <td className="px-3 py-4 text-sm text-gray-500 max-w-xs truncate" title={application.message}>
                           {application.message || 'No message provided'}
@@ -194,4 +229,4 @@ const Creditapp = () => {
   );
 };
 
-export default Creditapp;
+export default memo(Creditapp);

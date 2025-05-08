@@ -1,12 +1,4 @@
-// import React from 'react'
 
-// const Loanform = () => {
-//   return (
-//     <div>loanform</div>
-//   )
-// }
-
-// export default Loanform
 
 import { useForm } from 'react-hook-form';
 import axios from 'axios';

@@ -20,6 +20,7 @@ import Loanform from './pages/loanform'
 import Creditsection from './pages/creditsection'
 import ChagnePswdUser from './components/chagnePswdUser'
 import Managerpanel from './components/managerpanel'
+import FounderPage from './components/founder'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
      <Main />
      <MobileBanking />
      <Marketfeed />
+     <FounderPage />
      <Footer /> 
       </> ) },  
     { path: '/login', element : ( <>    <Navbar /> < Login /> <Footer />  </>  ) },  

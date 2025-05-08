@@ -57,7 +57,9 @@ const Login = () => {
       })
       
       const userdata = data.data;
-      
+       console.log(userdata)
+       localStorage.setItem('id' , JSON.stringify(data.data.id))
+        // console.log(localStorage.getItem('id'));
       if (data.code == 1) {
         localStorage.setItem('user', JSON.stringify(userdata))
         localStorage.setItem('token', JSON.stringify(userdata.token))

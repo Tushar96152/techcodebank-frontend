@@ -34,9 +34,8 @@ const Navbar = () => {
   const handleLogout = async() => { 
     localStorage.removeItem('user');
     localStorage.removeItem('token');
-    setTimeout( ()=> { 
     localStorage.removeItem('accoundetail');
-    }, 100);
+    localStorage.removeItem('id');
     toast.success('Logout success');  
     navigate('/')
     window.location.reload();
@@ -65,9 +64,10 @@ const Navbar = () => {
        e.preventDefault();
        console.log('clicked');
        const token = JSON.parse(localStorage.getItem('token'));
-       const code = JSON.parse(localStorage.getItem('code'));
-   
-       const {data} =  await axios.get(`http://3.110.164.139:8080/account/getById/${code}`,{
+      // const id = userdata.id;
+        const id = JSON.parse(localStorage.getItem('id'))
+        console.log(id);
+       const {data} =  await axios.get(`http://3.110.164.139:8080/account/getById/${id}`,{
          headers: {
            'Authorization': `Bearer ${token}` 
          }
@@ -99,12 +99,12 @@ const Navbar = () => {
     <nav className="navbar fixed z-112">
 
       <div className="flex  justify-between  bg-[#003459] w-[vw] h-20 py-5 px-[2rem] mt-[-8px]">
-          <img src={Blogo} alt=""  className='w-18 h-12 absolute rounded-sm'/>
+          <img src={Blogo} alt=""  className='w-30 h-18 mt-[-12px]  absolute rounded-sm'/>
         <div className=''>
-          <h1 className="text-[#FDBD30] font-bold text-xl ml-[7rem]">
+          <h1 className="text-[#FDBD30] font-bold text-xl ml-[9rem]">
             Tech Code bank
           </h1>
-          <p className="nav-ul-item text-white text-sm ml-[7rem]">...the name you can BANK upon !</p>
+          <p className="nav-ul-item text-white text-sm ml-[9rem]">...the name you can BANK upon !</p>
         </div>
 
         <div className="flex gap-3">

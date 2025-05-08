@@ -7,6 +7,11 @@ import { UserContext } from '../contextapi/index';
 const LoanSection = () => {
 const  { creditdetails } = useContext(UserContext);
 //console.log(creditdetails)
+const  applicationId  = creditdetails.applicationId;
+localStorage.setItem('applicationId' , JSON.stringify(applicationId))
+// console.log(localStorage.getItem('applicationId'))
+// console.log(applicationId)
+
 
 const [loanData , setLoanData] =useState([])
   const loanDetail = async() => {
@@ -32,10 +37,11 @@ const [loanData , setLoanData] =useState([])
 
   return (
     <>
+    <main className='p-0 m-0'>
 
     <nav className='flex w-100% box-border-0 m-0 p-0'> 
          <a href="/loanApply">
-     <button className='bg-[#A20A3A] w-[30rem] h-10 border-gray-400 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Loan</button>
+     <button className='bg-[#A20A3A] w-[30rem] h-10 border-gray-300 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Loan</button>
         </a>
       
         <a href="/credit-card">
@@ -48,15 +54,16 @@ const [loanData , setLoanData] =useState([])
 
     <main className=' flex h-80  mt-10 mx-20 justify-between'> 
     {loanData.map((elem) => (
-  <div 
-    key={elem.id}
-    className="max-w-md  bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-6 transition-all duration-300 hover:shadow-lg"
-  >
+      <div 
+      key={elem.id}
+      className="max-w-md  bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-6 transition-all duration-300 hover:shadow-lg"
+      >
     <div className="p-8" key={elem.id}>
       <div className="flex justify-between items-start">
         <div>
           <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
             Loan ID: #{elem.loanId}
+            {localStorage.setItem('loanId' , JSON.stringify(elem.loanId))}
           </div>
           <div className="mt-1 flex items-center">
             <span className="text-gray-900 font-bold text-2xl">
@@ -136,7 +143,7 @@ const [loanData , setLoanData] =useState([])
     </main>
 
    
-
+ </main>
 
 
     </>
