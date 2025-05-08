@@ -6,7 +6,11 @@ body{
     margin: 0px;
     box-sizing: border-box;
 }
-
+.MuiTabPanel-root{
+    box-sizing: 0px;
+    margin: 0px;
+    padding: 0px;
+}
 .multitabBox{
    box-sizing: border-box;
    padding: 0px;
