@@ -3,7 +3,7 @@ import { useEffect ,useState  } from 'react';
 import { useForm } from 'react-hook-form';
 import { useContext  } from 'react';
 import { UserContext } from '../contextapi/index';
-//import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -90,10 +90,10 @@ var fetchbranchId= async() => {
       toast.success('Account was sucessfully created')
       navigate('/al');
     }else{
-      toast.error('somthing went wrong')
+      toast.error(data.message);
     }
   }catch{
-    navigate('*')
+    toast.error('warning');
   }
 
    // Handle form submission here
@@ -314,11 +314,7 @@ var fetchbranchId= async() => {
                 errors.aadhaarNumber ? 'border-red-500' : ''
               }`}
               {...register('documentNumber', {
-                required: { value: true, message: 'document number is required' },
-                pattern: {
-                  value: /^\d{4}$/,
-                  message: 'documentNumber must be 4 digits'
-                }
+                required: { value: true, message: 'document number is required' }
               })}
             />
             {errors.documentNumber && (

@@ -36,7 +36,7 @@ const Estatement = () => {
 
 
   return (
-    <div className="max-w-6xl h-150 mx-0 p-0 box-border-0 bg-gray-100 rounded-lg shadow-md overflow-y-scroll">
+    <div className="multitabBox max-w-6xl h-150 mx-0 p-0 box-border-0 bg-gray-300 rounded-xl shadow-md overflow-y-scroll">
       <div className="flex items-center mb-6 ml-[2rem]">
         <h2 className="text-2xl font-bold text-[#A20A3A] p-5">Transaction History</h2>
       

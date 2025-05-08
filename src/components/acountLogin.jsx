@@ -34,7 +34,7 @@ const handleSubmit = async(event) => {
         toast.success(data.message)
         navigate('/');
       }else{
-        toast.error("userId or password Incoorect Enter")
+        toast.error("userId or password Incoorect Enter");
         setUserId("")
         setPassword("")
       }
@@ -48,13 +48,13 @@ const handleSubmit = async(event) => {
     <div className='w-100% h-150 bg-gray-400 py-36  px-[30rem]'> 
 <section className='left-side '>
     <div className='w-90 h-108 bg-gray-100 border-gray-200 border-1 shadow-2xl rounded-sm'>
-      <h2 className='ml-4'> Loging your NetBanking Id ? <a href="/createAccount" className='text-blue-600'>Create Acccount</a> </h2>
+      <h2 className='ml-4'> Loging your User Id ? <a href="/createAccount" className='text-blue-600'>Create Acccount</a> </h2>
       <hr />
  <form action="post" onSubmit={handleSubmit}>
       <div className='flex flex-col gap-5 px-4 py-4'>
 
          <div>
-              <label htmlFor="">Bank ID</label>
+              <label htmlFor="">User ID</label>
                <input className='border-1 rounded-sm bg-white w-55 h-8 ml-9 text-black px-4' type="text"  placeholder='' required value={userId} onChange={(e) =>setUserId(e.target.value) } />
         </div>
         <div>

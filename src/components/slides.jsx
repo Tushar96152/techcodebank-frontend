@@ -7,6 +7,7 @@ import Bank from '../assets/bank.jpg'
 import Man from '../assets/man.jpg'
 import Slide1 from '../assets/slide1.jpeg'
 import Slide2 from '../assets/slide2.jpg'
+import slide3 from '../assets/3dbank.jpg'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -42,13 +43,13 @@ const Slides = () => {
 
         <SwiperSlide> 
         <div className='flex justify-center'>
-         <img className='w-500 h-120' src={Slide1} alt="" /> 
+         <img className='w-500 h-120' src={Slide2} alt="" /> 
         </div>
         </SwiperSlide>
 
         <SwiperSlide> 
         <div className='flex justify-center'>
-         <img className='w-500 h-120' src={Slide2} alt="" /> 
+         <img className='w-500 h-120' src={slide3} alt="" /> 
         </div>
         </SwiperSlide>
 

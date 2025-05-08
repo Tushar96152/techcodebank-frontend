@@ -41,10 +41,10 @@ const AccountSumary = () => {
     ];
   
   return (
-    <div className="w-100% h-150 box-border-0 bg-gray-200 p-0 m-0">
+    <div className="multitabBox w-100% h-150 box-border-0 bg-gray-200 p-0 m-0">
       {/* Header */}
-      <div className="flex  items-center mb-6 p-4">
-        <div>
+      <div className="flex  tems-center mb-6 p-4">
+        <div className='px-8'>
           <h1 className="text-2xl font-bold text-blue-900"> Net Banking</h1>
           <p className="text-gray-600">Welcome back, Customer</p>
         </div>
@@ -87,7 +87,7 @@ const AccountSumary = () => {
       </div>
 
       {/* Quick Actions */}
-      <div className="bg-white rounded-lg shadow-md px-10 mx-[2rem] mb-6">
+      <div className="bg-white py-5 rounded-lg shadow-md px-10 mx-[2rem] mb-6">
         <h2 className="text-lg font-semibold text-gray-800 mb-4">Quick Actions</h2>
         <div className="grid grid-col-2 gap-4">
             

@@ -91,7 +91,7 @@ const Withdraw = () => {
  {step === 1 && (
         <form onSubmit={handleStep1Submit} action="" className='flex gap-14'>
           <div className='gap-66.5'>
-          <label htmlFor="">Account</label>
+          <label htmlFor="">Amount</label>
           <br />
           <input type="number" className='border-1 border-gray-400 w-[20rem] h-10 bg-gray-300 px-5'  name="amount"
               value={formData.amount}

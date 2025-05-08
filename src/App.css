@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
+
+
 body{
     margin: 0px;
     box-sizing: border-box;
+}
+
+.multitabBox{
+   box-sizing: border-box;
+   padding: 0px;
+   margin: 0px;
 }
 
 .css-13xfq8m-MuiTabPanel-root {

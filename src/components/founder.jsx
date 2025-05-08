@@ -1,7 +1,7 @@
 import React from 'react';
 import Aditya from '../assets/people/aditya.jpg'
 import Tushar from '../assets/people/tushar.jpeg' 
-import UserLogo from '../assets/userlogo.svg'
+import Ramesh from '../assets/people/ramesh.jpeg'
 
 const FounderPage = () => {
   const founders = [
@@ -23,7 +23,7 @@ const FounderPage = () => {
       id: 3,
       name: 'Remash Kumar',
       title: 'Chief Product Officer',
-      image: UserLogo,
+      image: Ramesh,
       bio: 'Product development guru with a passion for user-centric design.'
     },
 

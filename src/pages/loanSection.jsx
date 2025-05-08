@@ -37,15 +37,15 @@ const [loanData , setLoanData] =useState([])
 
   return (
     <>
-    <main className='p-0 m-0'>
+    <main className=' multitabBox p-0 m-0 h-150 bg-gray-300'>
 
-    <nav className='flex w-100% box-border-0 m-0 p-0'> 
+    <nav className='xl:grid-cols-2  lg:grid-cols-1'> 
          <a href="/loanApply">
-     <button className='bg-[#A20A3A] w-[30rem] h-10 border-gray-300 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Loan</button>
+        <button className='bg-[#A20A3A] w-[34rem] h-10 border-gray-300 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Loan</button>
         </a>
       
         <a href="/credit-card">
-     <button className='bg-[#A20A3A] w-[30rem] h-10 border-gray-400 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Credit </button>
+     <button className='bg-[#A20A3A] w-[34rem]  h-10 border-gray-400 border-1 text-gray-200 hover:bg-[#a20a3ad3] cursor-pointer'> Apply Credit </button>
         </a>
 
   
@@ -56,7 +56,7 @@ const [loanData , setLoanData] =useState([])
     {loanData.map((elem) => (
       <div 
       key={elem.id}
-      className="max-w-md  bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-6 transition-all duration-300 hover:shadow-lg"
+      className="max-w-md  bg-gray-100 rounded-xl shadow-2xl overflow-hidden md:max-w-2xl mb-6 transition-all duration-300 hover:shadow-lg"
       >
     <div className="p-8" key={elem.id}>
       <div className="flex justify-between items-start">
@@ -85,7 +85,7 @@ const [loanData , setLoanData] =useState([])
         </div>
       </div>
 
-      <div className="mt-15 border-t border-gray-200 pt-4">
+      <div className="mt-15 border-t border-gray-400 pt-4">
         <div className="flex items-center text-gray-500 text-sm">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -103,8 +103,8 @@ const [loanData , setLoanData] =useState([])
           <button className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             View Details
           </button>
-          <button className="px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-            Download
+          <button className="px-4 py-2 border bg-green-300 w-[8rem] border-gray-300 text-sm font-medium rounded-md hover:cursor-pointer text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            Repay
           </button>
         </div>
       </div>
@@ -115,7 +115,7 @@ const [loanData , setLoanData] =useState([])
 
 
 
-   <section className="bg-white w-80 h-74 ml-10 rounded-lg shadow-md overflow-hidden">
+   <section className="bg-gray-100 w-80 h-74 ml-10 rounded-lg shadow-2xl overflow-hidden">
   <div className="border-b border-gray-200 px-6 py-4 bg-gray-50">
     <h3 className="text-lg font-medium text-gray-900">Credit Details</h3>
   </div>
