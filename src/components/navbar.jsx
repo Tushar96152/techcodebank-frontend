@@ -1,7 +1,5 @@
 import React from 'react'
 import Blogo from '../assets/Blogo.png'
-
-import Logo from '../assets/logo.png'
 import UserLogo from '../assets/userlogo.svg'
 import { NavLink } from 'react-router-dom';
 import { useState , useEffect } from 'react';
@@ -15,14 +13,11 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 
-
 const Navbar = () => {
   var  { userdata }   = useContext(UserContext);
   var  { acountdata }   = useContext(UserContext);
   var   username  =[acountdata.userName];
-  
-  const [showpage, setShowPage] = useState(false);
-
+    const [showpage, setShowPage] = useState(false);
   const { setAcountdata } = useContext(UserContext);
   
   const navigate = useNavigate();
